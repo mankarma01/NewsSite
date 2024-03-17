@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-bar-main container flex">
+        <div class="nav-bar-logo">
+            <img src="/assets/LogoNews-removebg-preview.png" alt="" srcset="" onclick="reload()">
+        </div>
+        <div class="nav-bar-li ">
+            <ul class=" nav-ul flex">
+                <li class="nav-item" onclick="fetchNewsNode('ipl')" id="ipl">IPL</li>
+                <li class="nav-item" onclick="fetchNewsNode('coding')" id="coding">Technology</li>
+                <li class="nav-item" onclick="fetchNewsNode('politics')" id="politics">Politics</li>
+                <li class="nav-item" onclick="fetchNewsNode('sports')" id="sports">Sports</li>
+            </ul>
+        </div>
+        <div class="nav-bar-search">
+            <input type="text" placeholder="e.g. Science" id="seach-input">
+            <button id="btn">Search</button>
+        </div>
+
+        </div>
+    </nav>
+    <main class="container">
+        <div class="cards-container flex
+        " id="cards-container"></div>
+        </main>
+         <template id="card-main">
+            <div class="card">
+            <div class="card-header">
+                <img src="/assets/LogoNews.png" alt="" srcset="" id="news-logo">
+            </div>
+            <div class="card-content">
+              <h3 id="news-content-title"></h3>
+              <p id="news-content-source"></p>
+              <p id="news-content-description"></p>
+            </div>
+        </div>
+     </template> 
+    <script src="logic.js"></script>
+</body>
+</html>
